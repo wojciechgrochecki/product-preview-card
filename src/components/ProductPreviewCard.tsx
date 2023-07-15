@@ -4,15 +4,19 @@ import cartIcon from "../assets/images/icon-cart.svg";
 
 export default function ProductPreviewCard() {
   return (
-    <div className="grid grid-flow-row overflow-hidden rounded-xl sm:max-w-[600px] sm:auto-cols-fr sm:grid-flow-col">
+    <div className="grid grid-flow-row overflow-hidden rounded-xl xs:max-w-[600px] xs:auto-cols-fr xs:grid-flow-col">
       <img
         src={mobileImage}
         alt="preview"
-        className="sm:hidden"
+        className="xs:hidden"
         aria-hidden="true"
       />
-      <img src={desktopImage} alt="preview" className="hidden sm:block" />
-      <div className=" flex flex-col gap-3 bg-white p-7  sm:gap-5">
+      <img
+        src={desktopImage}
+        alt="preview"
+        className="hidden xs:block xs:h-full xs:object-cover"
+      />
+      <div className=" flex flex-col gap-3 bg-white p-7  xs:gap-5">
         <p className="tracking-[0.300rem] text-dark-grayish-blue">PERFUME</p>
         <h2 className="font-fraunces text-4xl text-very-dark-blue">
           Gabrielle Essence Eau De Parfum
