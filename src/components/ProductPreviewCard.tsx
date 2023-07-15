@@ -1,33 +1,18 @@
 import mobileImage from "../assets/images/image-product-mobile.jpg";
 import desktopImage from "../assets/images/image-product-desktop.jpg";
 import cartIcon from "../assets/images/icon-cart.svg";
-import { useEffect, useState } from "react";
+
 export default function ProductPreviewCard() {
-  const [imageSrc, setImageSrc] = useState(mobileImage);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 639) {
-        setImageSrc(desktopImage);
-      } else {
-        setImageSrc(mobileImage);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <div className="flex flex-col overflow-hidden rounded-xl transition-all sm:flex-row">
+    <div className="grid grid-flow-row overflow-hidden rounded-xl sm:max-w-[600px] sm:auto-cols-fr sm:grid-flow-col">
       <img
-        src={imageSrc}
+        src={mobileImage}
         alt="preview"
-        className="sm:w-auto sm:max-w-[300px]"
+        className="sm:hidden"
+        aria-hidden="true"
       />
-
-      <div className=" flex flex-col gap-3 bg-white p-7 sm:max-w-[300px] sm:gap-5">
+      <img src={desktopImage} alt="preview" className="hidden sm:block" />
+      <div className=" flex flex-col gap-3 bg-white p-7  sm:gap-5">
         <p className="tracking-[0.300rem] text-dark-grayish-blue">PERFUME</p>
         <h2 className="font-fraunces text-4xl text-very-dark-blue">
           Gabrielle Essence Eau De Parfum
