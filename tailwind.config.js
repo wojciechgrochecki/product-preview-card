@@ -25,6 +25,9 @@ export default {
         fraunces: ["Fraunces", "serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
+      screens: {
+        xs: "500px",
+      },
     },
   },
   plugins: [],
