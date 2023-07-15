@@ -1,7 +1,12 @@
+import ProductPreviewCard from "./components/ProductPreviewCard";
 import "./App.css";
 
 function App() {
-  return <h1 className="mb-10 font-medium">Hello world!</h1>;
+  return (
+    <div className="flex h-screen items-center justify-center bg-cream px-3 py-5">
+      <ProductPreviewCard />
+    </div>
+  );
 }
 
 export default App;
