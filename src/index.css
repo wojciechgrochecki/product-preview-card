@@ -6,6 +6,10 @@
 
 
 @layer base {
+    body, html, #root {
+        height: 100%;
+    }
+
     html {
         font-family: Montserrat;
         font-size: 14px;
